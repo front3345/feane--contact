@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feane | Contact</title>
+
+<link rel="icon" type="image/png" href="icon11.png">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="icon" type="image/png" href="de28eaa2-f25e-44bc-9485-874aee5ef803.png">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#0b0b0b;
+    font-family:Arial,sans-serif;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+.navbar{
+    background:#111;
+    padding:15px 40px;
+    border-bottom:1px solid #222;
+}
+
+.navbar-brand{
+    color:white !important;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.navbar-brand span{
+    color:#ffc107;
+}
+
+.nav-link{
+    color:white !important;
+    margin:0 10px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#ffc107 !important;
+}
+
+.btn-yellow{
+    background:#ffc107;
+    border:none;
+    color:black;
+    font-weight:bold;
+    border-radius:30px;
+    padding:10px 25px;
+    transition:.3s;
+}
+
+.btn-yellow:hover{
+    background:#ffce3a;
+    transform:scale(1.04);
+}
+
+/* HERO */
+
+.contact-hero{
+    height:45vh;
+    background:
+    linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+    url("background.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.contact-hero h1{
+    font-size:65px;
+    font-weight:bold;
+}
+
+.contact-hero p{
+    margin-top:15px;
+    color:#ddd;
+    font-size:18px;
+}
+
+/* CONTACT */
+
+.contact-section{
+    padding:100px 8%;
+}
+
+.contact-container{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+/* LEFT */
+
+.contact-info{
+    flex:1;
+    min-width:300px;
+}
+
+.contact-info h2{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    color:#bbb;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.info-box{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    margin-bottom:30px;
+    background:#151515;
+    padding:20px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-5px);
+    border:1px solid #ffc107;
+    box-shadow:0 0 20px rgba(255,193,7,.15);
+}
+
+.info-box i{
+    width:55px;
+    height:55px;
+    background:#ffc107;
+    color:black;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+}
+
+.info-box h5{
+    margin-bottom:8px;
+}
+
+/* RIGHT */
+
+.contact-form{
+    flex:1;
+    min-width:300px;
+    background:#151515;
+    padding:40px;
+    border-radius:25px;
+    border:1px solid #222;
+}
+
+.contact-form h3{
+    margin-bottom:25px;
+    font-size:35px;
+}
+
+.form-control{
+    background:#0d0d0d !important;
+    border:1px solid #333 !important;
+    color:white !important;
+    padding:15px !important;
+    border-radius:14px !important;
+    margin-bottom:20px;
+}
+
+.form-control:focus{
+    border-color:#ffc107 !important;
+    box-shadow:0 0 15px rgba(255,193,7,.25) !important;
+}
+
+textarea{
+    resize:none;
+    min-height:160px;
+}
+
+/* MAP */
+
+.map-section{
+    padding:0 8% 100px;
+}
+
+.map-box{
+    overflow:hidden;
+    border-radius:25px;
+    border:2px solid #222;
+}
+
+.map-box iframe{
+    width:100%;
+    height:450px;
+    border:none;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#000;
+    padding:60px 8%;
+}
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    gap:40px;
+    flex-wrap:wrap;
+}
+
+.footer h4{
+    margin-bottom:20px;
+}
+
+.footer p{
+    color:#bbb;
+}
+
+.social-icons i{
+    width:42px;
+    height:42px;
+    background:#151515;
+    border-radius:50%;
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    margin-right:10px;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.social-icons i:hover{
+    background:#ffc107;
+    color:black;
+    transform:translateY(-5px);
+}
+
+.copy{
+    text-align:center;
+    margin-top:40px;
+    color:#777;
+    border-top:1px solid #222;
+    padding-top:25px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+    .contact-hero h1{
+        font-size:50px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:15px 20px;
+    }
+
+    .contact-section{
+        padding:80px 5%;
+    }
+
+    .contact-hero{
+        height:40vh;
+    }
+
+    .contact-hero h1{
+        font-size:40px;
+    }
+
+    .contact-info h2{
+        font-size:35px;
+    }
+
+    .contact-form{
+        padding:30px 20px;
+    }
+
+}
+
+@media(max-width:500px){
+
+    .contact-hero h1{
+        font-size:32px;
+    }
+
+    .contact-hero p{
+        font-size:15px;
+    }
+
+    .info-box{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+}
+.social-icons a,
+.social-icons a:hover,
+.social-icons a:focus,
+.social-icons a:active{
+color:white !important;
+text-decoration:none !important;
+}
+
+.social-icons i{
+transition:0.3s;
+}
+
+.social-icons i:hover{
+color:#000 !important;
+transform:scale(1.2);
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+
+<div class="container-fluid">
+
+<a class="navbar-brand" href="#">
+Fea<span>ne</span>
+</a>
+
+<button class="navbar-toggler"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#nav">
+
+<span class="navbar-toggler-icon"></span>
+
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+
+<ul class="navbar-nav ms-auto align-items-lg-center">
+
+
+<li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+<a href=" https://front3345.github.io/feane-order/" class="btn btn-yellow">
+Order Online
+</a>
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="contact-hero">
+
+<div>
+
+<h1>Contact Us</h1>
+
+<p>
+We’d love to hear from you — send us your message anytime.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+
+<div class="contact-container">
+
+<!-- LEFT -->
+
+<div class="contact-info">
+
+<h2>Get In Touch</h2>
+
+<p>
+Have questions about our menu, delivery, reservations,
+or special offers? Contact the Feane team and we’ll be
+happy to help you anytime.
+</p>
+
+<div class="info-box">
+
+<i class="fas fa-location-dot"></i>
+
+<div>
+<h5>Location</h5>
+<p>Cairo, Egypt</p>
+</div>
+
+</div>
+
+<div class="info-box">
+
+<i class="fas fa-phone"></i>
+
+<div>
+<h5>Phone</h5>
+<p>+20 15 58111089</p>
+</div>
+
+</div>
+
+<div class="info-box">
+
+<i class="fas fa-envelope"></i>
+
+<div>
+<h5>Email</h5>
+<p>info@feanefood.com</p>
+</div>
+
+</div>
+
+<div class="info-box">
+
+<i class="fas fa-clock"></i>
+
+<div>
+<h5>Opening Hours</h5>
+<p>Everyday — 10:00 AM to 11:30 PM</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="contact-form">
+
+<h3>Send Message</h3>
+
+<form onsubmit="sendMessage(event)">
+
+<input
+type="text"
+class="form-control"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+class="form-control"
+placeholder="Your Email"
+required>
+
+<input
+type="text"
+class="form-control"
+placeholder="Subject"
+required>
+
+<textarea
+class="form-control"
+placeholder="Write Your Message..."
+required></textarea>
+
+<button class="btn btn-yellow w-100 mt-2">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section class="map-section">
+
+<div class="map-box">
+
+<iframe
+src="https://www.google.com/maps?q=30.0444,31.2357&z=13&output=embed">
+</iframe>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-content">
+
+<div>
+
+<h4>Feane</h4>
+
+<p>
+Fresh meals, premium ingredients,
+and unforgettable taste.
+</p>
+
+</div>
+
+<div>
+
+<h4>Location</h4>
+
+<p>
+<i class="fas fa-location-dot"></i>
+Cairo, Egypt
+</p>
+
+<p>
+Downtown Cairo
+</p>
+
+</div>
+
+<div>
+
+<h4>Follow Us</h4>
+
+<div class="social-icons">
+
+<a class="link" href="https://www.facebook.com/lmar.mhmd.221308/">
+<i class="fab fa-facebook-f"></i>
+</a>
+
+<a class="link" href="https://x.com/taghreed712014">
+<i class="fab fa-twitter"></i>
+</a>
+
+<a class="link" href="https://www.linkedin.com/in/taghreed-mohammed-9a8720407/">
+<i class="fab fa-linkedin-in"></i>
+</a>
+
+<a class="link" href="https://www.instagram.com/taghreedmohammed712014/">
+<i class="fab fa-instagram"></i>
+</a>
+
+</div>
+</div>
+
+</div>
+
+<div class="copy">
+© 2026 Feane Restaurant. All Rights Reserved.
+</div>
+
+</footer>
+
+<script>
+
+function sendMessage(e){
+
+e.preventDefault();
+
+alert("Message Sent Successfully ✨");
+
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
